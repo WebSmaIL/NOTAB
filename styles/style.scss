@@ -1,0 +1,19 @@
+// IMPORT FONTS
+@import "montserrat";
+@import "noto";
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #000000;
+  font-family: "Montserrat", serif;
+  color: #fff;
+}
+
+//IMPORT COMPONENTS
+@import "styled-components/header";

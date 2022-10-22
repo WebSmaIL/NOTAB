@@ -1,0 +1,59 @@
+//IMPORT CUSTOM
+@import "../custom";
+
+.header {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 0 100px;
+
+  &__logoContainer {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    padding: 10px 0;
+    margin: 0 100px 0 0;
+  }
+
+  &__logo {
+
+  }
+
+  &__title {
+    @include customFont(inherit, 44px, normal, bold);
+    margin: 0;
+  }
+
+  &__loginContainer {
+    display: flex;
+    align-items: center;
+  }
+
+  &__loginImg {
+    margin: 0 15px 0 0;
+  }
+
+  &__loginLink {
+    @include customFont('Noto Sans', 18px, normal, 500);
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+
+    &:after {
+      content: "";
+      height: 1px;
+      width: 0;
+      background: #fff;
+      transition: all .2s ease;
+      position: absolute;
+
+      bottom: 0;
+      left: 0;
+    }
+    &:hover {
+      &:after {
+        width: 100%;
+      }
+    }
+  }
+}
