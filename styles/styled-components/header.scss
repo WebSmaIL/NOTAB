@@ -5,7 +5,10 @@
   display: flex;
   justify-content: start;
   align-items: center;
-  padding: 0 100px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
 
   &__logoContainer {
     display: flex;

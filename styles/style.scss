@@ -2,10 +2,23 @@
 @import "montserrat";
 @import "noto";
 
+@import "./custom";
+
 *,
 *:before,
 *:after {
   box-sizing: border-box;
+}
+
+section,
+header,
+main,
+footer {
+  padding: 0 100px;
+
+  @media screen and (max-width: $mediaLarge) {
+    padding: 0 50px;
+  }
 }
 
 body {
@@ -13,7 +26,10 @@ body {
   background: #000000;
   font-family: "Montserrat", serif;
   color: #fff;
+  overflow-x: hidden;
 }
 
 //IMPORT COMPONENTS
 @import "styled-components/header";
+@import "styled-components/main";
+@import "styled-components/download";

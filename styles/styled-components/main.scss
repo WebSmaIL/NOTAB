@@ -1,3 +1,51 @@
-.main {
+@import "../custom";
 
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__column-1 {
+    width: 50%;
+  }
+
+  &__descriptionContainer {
+    display: flex;
+  }
+
+  &__description {
+    max-width: 380px;
+    align-self: center;
+
+    @include customFont('Noto Sans', 20px, normal, 400);
+    line-height: 27px;
+
+    transform: translateX(-120px) translateY(40px);
+  }
+
+  &__title {
+    @include customFont(inherit, 64px, normal, 700);
+    line-height: 70px;
+  }
+
+  &__column-2 {
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+    position: relative;
+  }
+
+  &__phoneImage {
+    width: 100%;
+    max-width: 532px;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    right: -100px;
+    z-index: 0;
+  }
 }

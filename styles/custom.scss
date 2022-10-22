@@ -1,3 +1,7 @@
+$mediaLarge: 1200px;
+$mediaMedium: 768px;
+$mediaSmall: 440px;
+
 @mixin customFont ($ff, $fz, $fs, $fw) {
   font-family: $ff;
   font-size: $fz;
