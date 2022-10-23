@@ -4,13 +4,28 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @media screen and (max-width: $mediaLarge) {
+    padding-right: 0;
+  }
+
 
   &__column-1 {
     width: 50%;
+    position: relative;
+    z-index: 1;
+    @media screen and (max-width: $mediaMedium) {
+      width: 70%;
+    }
   }
 
   &__descriptionContainer {
     display: flex;
+  }
+
+  &__circle {
+    @media screen and (max-width: $mediaLarge) {
+      display: none;
+    }
   }
 
   &__description {
@@ -21,11 +36,34 @@
     line-height: 27px;
 
     transform: translateX(-120px) translateY(40px);
+
+    @media screen and (max-width: $mediaLarge) {
+      transform: none;
+    }
+    @media screen and (max-width: $mediaSmall) {
+      font-size: 16px;
+      line-height: 20px;
+      max-width: 280px;
+    }
   }
 
   &__title {
     @include customFont(inherit, 64px, normal, 700);
     line-height: 70px;
+
+    @media screen and (max-width: $mediaLarge) {
+      font-size: 54px;
+      margin-bottom: 0;
+      line-height: 50px;
+    }
+    @media screen and (max-width: $mediaMedium) {
+      font-size: 40px;
+    }
+    @media screen and (max-width: $mediaSmall) {
+      font-size: 30px;
+      line-height: 40px;
+    }
+
   }
 
   &__column-2 {
@@ -33,6 +71,9 @@
     justify-content: flex-end;
     width: 50%;
     position: relative;
+    @media screen and (max-width: $mediaMedium) {
+      width: 30%;
+    }
   }
 
   &__phoneImage {
@@ -40,6 +81,11 @@
     max-width: 532px;
     position: relative;
     z-index: 1;
+
+    @media screen and (max-width: $mediaMedium) {
+      width: 320px;
+      transform: translateX(50%);
+    }
   }
 
   &__bg {

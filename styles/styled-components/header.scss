@@ -9,6 +9,12 @@
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 1;
+
+  @media screen and (max-width: $mediaLarge) {
+    width: 100%;
+    justify-content: space-between;
+  }
 
   &__logoContainer {
     display: flex;
@@ -19,12 +25,24 @@
   }
 
   &__logo {
-
+    @media screen and (max-width: $mediaLarge) {
+      max-width: 75px;
+    }
+    @media screen and (max-width: $mediaSmall) {
+      max-width: 50px;
+    }
   }
 
   &__title {
     @include customFont(inherit, 44px, normal, bold);
     margin: 0;
+
+    @media screen and (max-width: $mediaLarge) {
+      font-size: 32px;
+    }
+    @media screen and (max-width: $mediaSmall) {
+      max-width: 24px;
+    }
   }
 
   &__loginContainer {
@@ -34,6 +52,9 @@
 
   &__loginImg {
     margin: 0 15px 0 0;
+    @media screen and (max-width: $mediaSmall) {
+      display: none;
+    }
   }
 
   &__loginLink {

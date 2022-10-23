@@ -19,6 +19,9 @@ footer {
   @media screen and (max-width: $mediaLarge) {
     padding: 0 50px;
   }
+  @media screen and (max-width: $mediaMedium) {
+    padding: 0 20px;
+  }
 }
 
 body {
