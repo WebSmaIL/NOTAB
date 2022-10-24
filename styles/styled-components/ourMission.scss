@@ -1,0 +1,14 @@
+.ourMission {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100vh;
+
+  &__content {
+    max-width: 300px;
+  }
+
+  &__image {
+    transform: rotate(90deg) translateY(30%);
+  }
+}
