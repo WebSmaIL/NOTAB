@@ -8,3 +8,16 @@ $mediaSmall: 429px;
   font-style: $fs;
   font-weight: $fw;
 }
+
+@mixin flex($jc, $ai, $fld) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+  flex-direction: $fld;
+}
+
+@mixin positionAbsolute ($top, $left) {
+  position: absolute;
+  top: $top;
+  left: $left;
+}

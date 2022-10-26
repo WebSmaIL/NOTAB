@@ -1,0 +1,121 @@
+@import "../custom";
+
+.qrcode {
+  margin-top: 300px;
+  padding: 0;
+  @media screen and (max-width: $mediaLarge) {
+    margin-top: 150px;
+  }
+  @media screen and (max-width: $mediaMedium) {
+    margin-top: 100px;
+  }
+
+  &__bgFull {
+    width: 100%;
+    @media screen and (max-width: $mediaMedium) {
+      display: none;
+    }
+  }
+
+  &__bgMin {
+    display: none;
+
+    @media screen and (max-width: $mediaMedium) {
+      display: block;
+      width: 100%;
+
+      &-cocktail {
+        max-width: 500px;
+      }
+    }
+
+
+  }
+
+  &__content {
+    @include flex(center, start, row);
+    @media screen and (max-width: $mediaLarge) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__mainContent {
+    max-width: 400px;
+    margin-right: 50px;
+    transform: translateY(-150px);
+    padding: 0 20px;
+
+    @media screen and (max-width: $mediaLarge) {
+      transform: translateY(-100px);
+      margin-right: 0;
+    }
+
+  }
+
+  &__phones {
+    @include flex(space-around, center, row);
+
+    @media screen and (max-width: $mediaMedium) {
+      transform: translateY(-50px);
+      flex-direction: column;
+      padding: 0 20px;
+    }
+  }
+
+  &__phone {
+    @media screen and (max-width: $mediaMedium) {
+      width: 100%;
+    }
+
+    &:first-child {
+      margin-right: 40px;
+      transform: translateY(-70%);
+      @media screen and (max-width: $mediaLarge) {
+        transform: none;
+      }
+      @media screen and (max-width: $mediaMedium) {
+        margin-right: 0;
+        margin-bottom: 40px;
+      }
+    }
+    &:last-child {
+      transform: translateY(-20%);
+      @media screen and (max-width: $mediaLarge) {
+        transform: none;
+      }
+    }
+
+
+  }
+
+  &__links {
+    margin-top: 50px;
+    @include flex(space-between, center, row);
+
+    @media screen and (max-width: $mediaMedium) {
+      flex-direction: column;
+    }
+  }
+
+  &__link {
+    border-radius: 10px;
+    transition: all .2s ease;
+    @media screen and (max-width: $mediaMedium) {
+      &:first-child {
+        margin-bottom: 20px;
+      }
+    }
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 -8px 15px rgba(236, 236, 236, 0.5);
+    }
+  }
+
+  &__linkImage {
+    width: 100%;
+    height: 100%;
+    max-width: 160px;
+  }
+}

@@ -1,0 +1,114 @@
+@import "../custom";
+
+.integration {
+  @include flex(space-around, center, row);
+  margin-top: 100px;
+  width: 100%;
+
+  @media screen and (max-width: $mediaLarge) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__textContent {
+    max-width: 497px;
+
+    @media screen and (max-width: $mediaLarge) {
+      margin-bottom: 100px;
+    }
+    @media screen and (max-width: $mediaMedium) {
+      margin-bottom: 150px;
+    }
+  }
+
+  &__graphics {
+    width: 100%;
+    position: relative;
+
+    @media screen and (max-width: $mediaLarge) {
+      max-width: 300px;
+      min-height: 300px;
+    }
+  }
+
+  &__graph {
+    &-blueCircles {
+      @include positionAbsolute(0, 70px);
+    }
+    &-blueGraphWithDots {
+      @include positionAbsolute(100px, 200px);
+      z-index: 1;
+    }
+    &-blueVerticalGraph {
+      @include positionAbsolute(200px, 100px);
+    }
+    &-dataGraph {
+      @include positionAbsolute(250px, 350px);
+    }
+    &-lamp {
+      @include positionAbsolute(0, 380px);
+    }
+    &-monochromeGraph {
+      @include positionAbsolute(-200px, 250px);
+    }
+    &-pinkBlueGraph {
+      @include positionAbsolute(70px, -50px);
+    }
+
+    @media screen and (max-width: $mediaLarge) {
+      width: 50%;
+      &-blueCircles {
+        @include positionAbsolute(0, -100px);
+      }
+      &-blueGraphWithDots {
+        @include positionAbsolute(-50px , 200px);
+        z-index: 1;
+      }
+      &-blueVerticalGraph {
+        @include positionAbsolute(50px, 50px);
+      }
+      &-dataGraph {
+        width: 100%;
+        @include positionAbsolute(150px, 350px);
+      }
+      &-lamp {
+        @include positionAbsolute(-40%, 330px);
+      }
+      &-monochromeGraph {
+        width: 80%;
+        @include positionAbsolute(100px, -200px);
+      }
+      &-pinkBlueGraph {
+        display: none;
+      }
+    }
+
+    @media screen and (max-width: $mediaMedium) {
+      width: 40%;
+      &-blueCircles {
+        @include positionAbsolute(0, -20px);
+      }
+      &-blueGraphWithDots {
+        @include positionAbsolute(-50px , 120px);
+        z-index: 1;
+      }
+      &-blueVerticalGraph {
+        @include positionAbsolute(50px, 100px);
+      }
+      &-dataGraph {
+        width: 100%;
+        @include positionAbsolute(150px, 200px);
+      }
+      &-lamp {
+        @include positionAbsolute(-40%, 230px);
+      }
+      &-monochromeGraph {
+        width: 80%;
+        @include positionAbsolute(80px, -150px);
+      }
+      &-pinkBlueGraph {
+        display: none;
+      }
+    }
+  }
+}

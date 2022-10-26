@@ -1,14 +1,55 @@
+@import "../custom";
+
 .ourMission {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  height: 100vh;
+  min-height: 100vh;
+
+  @media screen and (max-width: $mediaLarge) {
+    flex-direction: column-reverse;
+    margin-top: 100px;
+  }
 
   &__content {
-    max-width: 300px;
+    max-width: 400px;
+    position: relative;;
   }
 
   &__image {
+    width: 100%;
     transform: rotate(90deg) translateY(30%);
+
+    @media screen and (max-width: $mediaLarge) {
+      transform: none;
+    }
+  }
+
+  &__title {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__text {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__circle {
+    width: 85px;
+    height: 85px;
+
+    background: #F101BF;
+    opacity: 0.7;
+    filter: blur(50px);
+
+    position: absolute;
+    top: -10%;
+    right: 10%;
+    z-index: 0;
+
+    @media screen and (max-width: $mediaMedium) {
+      left: 0;
+    }
   }
 }
