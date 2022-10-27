@@ -1,0 +1,118 @@
+@import "../custom";
+
+.easierOrdering {
+  margin-top: 100px;
+  @include flex(start, center, column);
+
+  &__content {
+    align-self: end;
+    position: relative;
+
+    &:after {
+      content: "";
+      width: 200px;
+      height: 200px;
+      background: linear-gradient(12.08deg, #F101BF 2.82%, #0066FF 97.06%);
+      opacity: 0.5;
+      filter: blur(125px);
+      transform: rotate(5.78deg);
+      @include positionAbsolute(100%, 80%);
+    }
+
+    @media screen and (max-width: $mediaLarge) {
+      margin-bottom: 100px;
+    }
+    @media screen and (max-width: $mediaMedium) {
+      margin-bottom: 150px;
+      width: 100%;
+      align-self: start;
+    }
+    @media screen and (max-width: $mediaSmall) {
+      margin-bottom: 80px;
+    }
+  }
+
+  &__phoneBlock {
+    width: 50%;
+    position: relative;
+    @media screen and (max-width: $mediaMedium) {
+      width: 100%;
+    }
+  }
+
+  &__phone {
+    width: 100%;
+  }
+
+  &__text {
+    margin: 0;
+    @media screen and (max-width: $mediaSmall) {
+      font-size: 12px;
+    }
+  }
+
+  &__information {
+    width: 100%;
+    max-width: 250px;
+    padding: 20px;
+    background: #000000;
+    border: 0.76007px solid rgba(255, 255, 255, 0.5);
+    border-radius: 18.2417px;
+
+    @media screen and (max-width: $mediaMedium) {
+      max-width: 150px;
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    &-creditCards1 {
+      @include positionAbsolute(10%, 70%);
+      @media screen and (max-width: $mediaMedium) {
+        @include positionAbsolute(10%, 55%);
+      }
+
+      @media screen and (max-width: $mediaSmall) {
+        @include positionAbsolute(10%, 45%);
+      }
+    }
+
+    &-creditCards2 {
+      @include positionAbsolute(30%, -10%);
+      @media screen and (max-width: $mediaLarge) {
+        @include positionAbsolute(-20%, -10%);
+      }
+      @media screen and (max-width: $mediaMedium) {
+        @include positionAbsolute(-10%, 15%);
+      }
+      @media screen and (max-width: $mediaSmall) {
+        @include positionAbsolute(-20%, 5%);
+      }
+    }
+
+    &-skipLine {
+      @include positionAbsolute(70%, 20%);
+      max-width: 150px;
+
+      @media screen and (max-width: $mediaLarge) {
+        @include positionAbsolute(90%, 20%);
+      }
+      @media screen and (max-width: $mediaMedium) {
+        @include positionAbsolute(72%, 15%);
+        max-width: 120px;
+      }
+    }
+
+    &-splitTab {
+      @include positionAbsolute(60%, 80%);
+      max-width: 180px;
+
+      @media screen and (max-width: $mediaLarge) {
+        @include positionAbsolute(100%, 80%);
+      }
+      @media screen and (max-width: $mediaMedium) {
+        @include positionAbsolute(95%, 60%);
+        max-width: 140px;
+      }
+    }
+  }
+}

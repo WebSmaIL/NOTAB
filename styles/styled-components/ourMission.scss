@@ -11,16 +11,23 @@
     margin-top: 100px;
   }
 
+  &__container {
+    @media screen and (max-width: $mediaLarge) {
+      align-self: start;
+    }
+  }
+
   &__content {
     max-width: 400px;
     position: relative;;
   }
 
   &__image {
-    width: 100%;
+    width: 50%;
     transform: rotate(90deg) translateY(30%);
 
     @media screen and (max-width: $mediaLarge) {
+      width: 100%;
       transform: none;
     }
   }

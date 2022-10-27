@@ -1,0 +1,22 @@
+@import "../custom";
+
+.noTab {
+  margin: 300px 0;
+  position: relative;
+  display: flex;
+  padding: 0 40px;
+  @media screen and (max-width: $mediaMedium) {
+    display: none;
+  }
+
+  &__bg {
+    width: 100%;
+    @include positionAbsolute(-40%, 0);
+  }
+
+  &__phone {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+  }
+}

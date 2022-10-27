@@ -47,8 +47,11 @@
     padding: 0 20px;
 
     @media screen and (max-width: $mediaLarge) {
+      width: 100%;
+      max-width: none;
       transform: translateY(-100px);
       margin-right: 0;
+      align-self: start;
     }
 
   }
@@ -94,6 +97,7 @@
     @include flex(space-between, center, row);
 
     @media screen and (max-width: $mediaMedium) {
+      margin: 50px auto 0 auto;
       flex-direction: column;
     }
   }
@@ -109,7 +113,7 @@
 
     &:hover {
       transform: scale(1.05);
-      box-shadow: 0 -8px 15px rgba(236, 236, 236, 0.5);
+      box-shadow: 15px 5px 15px rgba(236, 236, 236, 0.1);
     }
   }
 

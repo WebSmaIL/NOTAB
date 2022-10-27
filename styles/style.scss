@@ -36,6 +36,8 @@ body {
   margin: 0;
   @include customFont(inherit, 51px, normal, 700);
   line-height: 62px;
+  position: relative;
+  z-index: 1;
 
   @media screen and (max-width: $mediaLarge) {
     @include customFont(inherit, 34px, normal, 700);
@@ -48,6 +50,8 @@ body {
 }
 
 .text {
+  position: relative;
+  z-index: 1;
   @include customFont('Noto Sans', 18px, normal, 400);
   line-height: 25px;
 
@@ -58,6 +62,7 @@ body {
 }
 
 //IMPORT COMPONENTS
+@import "styled-components/cookies";
 @import "styled-components/header";
 @import "styled-components/main";
 @import "styled-components/download";
@@ -66,3 +71,8 @@ body {
 @import "styled-components/scanner";
 @import "styled-components/integration";
 @import "styled-components/qrcode";
+@import "styled-components/generate";
+@import "styled-components/easrierOrdering";
+@import "styled-components/notab";
+@import "styled-components/getInTouch";
+@import "styled-components/footer";

@@ -2,11 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/style.css">
     <title>Title</title>
 </head>
 <body>
+<div class="cookies" id="cookies">
+    <p class="cookies__text text">We use cookie to improve your experience on our site. By using our site you consent
+        cookies.</p>
+    <button class="cookies__button" id="cookiesButton">OK</button>
+</div>
 <header class="header">
     <div class="header__logoContainer">
         <img class="header__logo" alt="" src="./img/logo.png">
@@ -34,15 +39,15 @@
     </div>
 </main>
 <section class="download">
-    <h1 class="download__title">DOWNLOAD OUR APP</h1>
+    <h2 class="download__title">DOWNLOAD OUR APP</h2>
     <div class="download__linksContainer">
-        <a href="#" class="download__link"><img class="download__linkImage" src="./img/download_app_store.png"
+        <a href="#" class="download__link"><img class="download__linkImage" src="./img/download_app_store.svg"
                                                 alt=""></a>
-        <a href="#" class="download__link"><img class="download__linkImage" src="./img/download_google_play.png" alt=""></a>
+        <a href="#" class="download__link"><img class="download__linkImage" src="./img/download_google_play.svg" alt=""></a>
     </div>
 </section>
-<section class="questions">
-    <article class="questions__container">
+<div class="questions">
+    <div class="questions__container">
         <p class="questions__text">
             Would like to become
             a member, please contact us
@@ -50,26 +55,24 @@
         <a href="#" class="questions__link">
             support@notab.com
         </a>
-    </article>
-    <article class="questions__container">
+    </div>
+    <div class="questions__container">
         <p class="questions__text">
             Already a partner?
         </p>
         <a href="#" class="questions__link">
             Login
         </a>
-    </article>
-</section>
-<section class="ourMission">
-    <div class="ourMission__container">
-        <img src="./img/phone2.png" alt="" class="ourMission__image">
     </div>
+</div>
+<section class="ourMission">
+    <img src="./img/phone2.png" alt="" class="ourMission__image">
     <div class="ourMission__container">
         <div class="ourMission__content">
             <div class="ourMission__circle"></div>
-            <h1 class="ourMission__title title">
+            <h2 class="ourMission__title title">
                 Our mission and vision
-            </h1>
+            </h2>
             <p class="ourMission__text text">
                 While technology is our sweet spot, we’ve developed our vision alongside
                 our customers to ensure your everyday problems are solved through simplistic tools. And as your business
@@ -86,7 +89,7 @@
             <img src="./img/phoneScanner2.png" alt="" class="scanner__img">
         </div>
         <div class="scanner__textContent">
-            <h1 class="scanner__title title">ID Scanner</h1>
+            <h2 class="scanner__title title">ID Scanner</h2>
             <p class="scanner__text text">
                 Scan, verify, and collect data on each person that walks through your door to humanize your data. You
                 also
@@ -97,9 +100,9 @@
 </section>
 <section class="integration">
     <div class="integration__textContent">
-        <h1 class="title">
+        <h2 class="title">
             BI Tool Integration
-        </h1>
+        </h2>
         <p class="text">
             We use Business Intelligence Tool that allows you to be updated what is happening in your business just
             by one click. Track revenue
@@ -125,14 +128,16 @@
     <img src="./img/qrcode/bg_hand.png" alt="" class="qrcode__bgMin">
     <div class="qrcode__content">
         <div class="qrcode__mainContent">
-            <h1 class="title">QR Code</h1>
+            <h2 class="title">QR Code</h2>
             <p class="text">
                 No more conflict situations due to wrong order. The guest selects the positions, and after that
                 an individual QR code of his order is generated
             </p>
             <div class="qrcode__links">
-                <a href="#" class="qrcode__link"><img class="qrcode__linkImage" src="./img/download_app_store.png" alt=""></a>
-                <a href="#" class="qrcode__link"><img class="qrcode__linkImage" src="./img/download_google_play.png" alt=""></a>
+                <a href="#" class="qrcode__link"><img class="qrcode__linkImage" src="./img/download_app_store.svg"
+                                                      alt=""></a>
+                <a href="#" class="qrcode__link"><img class="qrcode__linkImage" src="./img/download_google_play.svg"
+                                                      alt=""></a>
             </div>
         </div>
         <img src="./img/qrcode/bg_cocktail.png" alt="" class="qrcode__bgMin qrcode__bgMin-cocktail">
@@ -142,5 +147,84 @@
         </div>
     </div>
 </section>
+<section class="generateQrCode">
+    <img class="generateQrCode__bg" src="./img/generate/bg.svg" alt="">
+    <div class="generateQrCode__phoneBlock">
+        <img class="generateQrCode__phone" src="./img/generate/phone.png" alt="">
+        <img class="generateQrCode__arrow" src="./img/generate/arrow.svg" alt="">
+        <img class="generateQrCode__AdaptiveArrow" src="./img/generate/adaptiveArrow.svg" alt="">
+    </div>
+    <div class="generateQrCode__content">
+        <h2 class="generateQrCode__title title">Generate your QR-code</h2>
+        <p class="generateQrCode__text text">The guest QR code is scanned
+            by the staff and automatically sent</p>
+    </div>
+</section>
+<section class="easierOrdering">
+    <div class="easierOrdering__content">
+        <h2 class="title">Easier ordering.<br>Happier guests.</h2>
+        <p class="text">NoTab makes it simple for patrons to easily</p>
+    </div>
+    <div class="easierOrdering__phoneBlock">
+        <img class="easierOrdering__phone" src="./img/IphoneLongScroll.png" alt="">
+        <div class="easierOrdering__information easierOrdering__information-creditCards1">
+            <p class="easierOrdering__text text">No more lost or forgotten credit cards</p>
+        </div>
+        <div class="easierOrdering__information easierOrdering__information-creditCards2">
+            <p class="easierOrdering__text text">No more lost or forgotten credit cards</p>
+        </div>
+        <div class="easierOrdering__information easierOrdering__information-splitTab">
+            <p class="easierOrdering__text text">No more split your tab</p>
+        </div>
+        <div class="easierOrdering__information easierOrdering__information-skipLine">
+            <p class="easierOrdering__text text">Skip the line</p>
+        </div>
+    </div>
+</section>
+<div class="noTab">
+    <img class="noTab__bg" src="./img/notab.svg" alt="">
+    <img class="noTab__phone" src="./img/notabPhone.png" alt="">
+</div>
+<section class="getInTouch">
+    <div class="getInTouch__textContent">
+        <h2 class="title">Get In Touch</h2>
+        <p class="text">Have questions about Noble or just want to say hello? Drop us a line and a member of our team
+            will getback to you shortly.</p>
+    </div>
+    <form class="getInTouch__form">
+        <input class="getInTouch__input field" type="text" name="Name" placeholder="Name">
+        <input class="getInTouch__input field" type="text" name="VenueName" placeholder="Venue Name">
+        <div class="getInTouch__flexInput">
+            <input class="getInTouch__input getInTouch__input-margin field" type="text" name="VenueCity"
+                   placeholder="Venue City">
+            <input class="getInTouch__input field" type="text" name="StateCity" placeholder="State City">
+        </div>
+        <input class="getInTouch__input field" type="email" name="Email" placeholder="Email">
+        <input class="getInTouch__input field" type="text" name="Subject" placeholder="Subject">
+        <textarea class="getInTouch__textarea field" placeholder="Message"></textarea>
+        <button class="getInTouch__button">Send</button>
+    </form>
+</section>
+<footer class="footer">
+    <div class="footer__download">
+        <h1 class="footer__downloadTitle">DOWNLOAD OUR APP</h1>
+        <div class="footer__downloadLinks">
+            <a href="#" class="footer__downloadLink"><img src="./img/download_app_store.svg" alt=""></a>
+            <a href="#" class="footer__downloadLink"><img src="./img/download_google_play.svg" alt=""></a>
+        </div>
+    </div>
+    <div class="footer__links">
+        <div class="footer__contacts">
+            <img class="footer__logo" src="./img/footerLogo.svg" alt="">
+            <p class="text">Contact us:<br>support@notab.com</p>
+            <p class="text">© 2020 - NoTab®</p>
+        </div>
+        <div class="footer__privacy">
+            <a href="#" class="footer__link text">Terms to use</a>
+            <a href="#" class="footer__link text">Privacy policy</a>
+        </div>
+    </div>
+</footer>
+<script src="./app/app.js"></script>
 </body>
 </html>

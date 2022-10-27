@@ -1,0 +1,105 @@
+@import "../custom";
+
+.generateQrCode {
+  position: relative;
+  @media screen and (max-width: $mediaLarge) {
+    margin-top: 50px;
+    @include flex(start, center, column-reverse);
+  }
+
+  &__bg {
+    width: 100%;
+    @include positionAbsolute(0, 0);
+    z-index: 0;
+    @media screen and (max-width: $mediaLarge) {
+      top: 50%;
+    }
+
+  }
+
+  &__phoneBlock {
+    width: fit-content;
+    margin: 20px auto;
+
+    position: relative;
+    z-index: 1;
+    @media screen and (max-width: $mediaMedium) {
+      width: 60%;
+    }
+
+    &:after {
+      content: "";
+      width: 1000px;
+      height: 900px;
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -450px;
+      margin-left: -500px;
+
+      background: linear-gradient(12.08deg, #F101BF 2.82%, #0066FF 97.06%);
+      opacity: 0.15;
+      filter: blur(155.784px);
+      border-radius: 476.034px;
+      transform: rotate(-0.55deg);
+
+      @media screen and (max-width: $mediaMedium) {
+        width: 600px;
+        height: 500px;
+        margin-top: -250px;
+        margin-left: -300px;
+      }
+    }
+  }
+
+  &__arrow {
+    @include positionAbsolute(30%, 110%);
+    z-index: 1;
+    @media screen and (max-width: $mediaLarge) {
+      display: none;
+    }
+  }
+
+  &__AdaptiveArrow {
+    display: none;
+    @media screen and (max-width: $mediaLarge) {
+      display: block;
+      @include positionAbsolute(85%, 80%);
+      z-index: 1;
+    }
+    @media screen and (max-width: $mediaMedium) {
+      @include positionAbsolute(90%, 85%);
+    }
+    @media screen and (max-width: $mediaSmall) {
+      @include positionAbsolute(80%, 60%);
+    }
+  }
+
+  &__phone {
+    position: relative;
+    z-index: 1;
+    @media screen and (max-width: $mediaMedium) {
+      margin: 0 auto;
+      width: 100%;
+    }
+  }
+
+  &__content {
+    @include flex(space-between, center, row);
+
+    @media screen and (max-width: $mediaLarge) {
+      flex-direction: column;
+      margin-bottom: 50px;
+      align-self: start;
+    }
+  }
+
+  &__title {
+    max-width: 380px;
+  }
+
+  &__text {
+    max-width: 300px;
+  }
+}
